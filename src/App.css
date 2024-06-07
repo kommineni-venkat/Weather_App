@@ -1,112 +1,146 @@
-/* App.css */
 * {
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-		Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html {
-	background-color: #f7f7f7;
+html, body {
+  height: 100%;
+  background: url('https://cdn.pixabay.com/animation/2023/02/16/14/40/14-40-49-756_512.gif') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;  
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.1;
+  z-index: -1;
 }
 
 .app-name {
-	font-size: 2.3rem;
-	color: rgb(17, 144, 0);
-	margin-bottom: 16px;
+  font-size: 2.5rem;
+  color: #1f2022;
+  margin-bottom: 16px;
+  text-shadow: 2px 2px #a2d9ff;
 }
 
 .App {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 600px;
-	min-height: 440px;
-	background-color: rgb(255, 255, 255);
-	text-align: center;
-	margin: 128px auto;
-	border-radius: 10px;
-	padding-bottom: 32px;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 600px;
+  min-height: 480px;
+  text-align: center;
+  margin: 128px auto;
+  border-radius: 10px;
+  padding: 32px;
 }
 
 .city-search {
-	width: 100%;
-	max-width: 400px;
-	box-sizing: border-box;
-	border: 2px solid rgb(204, 204, 204);
-	outline: none;
-	border-radius: 20px;
-	font-size: 16px;
-	background-color: #e5eef0;
-	background-position: 10px 12px;
-	background-repeat: no-repeat;
-	padding: 12px 40px 12px 40px;
-	-webkit-transition: width 0.4s ease-in-out;
-	transition: width 0.4s ease-in-out;
-	color: #333;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  outline: none;
+  border-radius: 20px;
+  font-size: 16px;
+  background-color: #e5eef0;
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  padding: 12px 20px;
+  transition: width 0.4s ease-in-out;
+  color: #333;
+  margin-bottom: 20px;
 }
 
 .city-search:focus {
-	width: 100%;
+  width: 100%;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #114890;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: #0d3573;
 }
 
 .city-name {
-	font-size: 1.5rem;
-	color: #444;
-	margin-bottom: 8px;
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 8px;
 }
 
 .date {
-	font-size: 1.25em;
-	font-weight: 500;
-	color: #777;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #555;
 }
 
 .icon-temp {
-	font-size: 3rem;
-	font-weight: 700;
-	color: #1e2432;
-	text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1e2432;
+  text-align: center;
 }
 
 .deg {
-	font-size: 1.3rem;
-	vertical-align: super;
+  font-size: 1.3rem;
+  vertical-align: super;
 }
 
 .des-wind {
-	font-weight: 500;
-	color: #666;
+  font-weight: 500;
+  color: #666;
 }
 
 .error-message {
-	display: block;
-	text-align: center;
-	color: #d32f2f;
-	font-size: 24px;
-	margin-top: auto;
+  display: block;
+  text-align: center;
+  color: #d32f2f;
+  font-size: 1.5rem;
+  margin-top: 20px;
 }
 
 .Loader {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .Loader>div {
-	margin: 0 auto;
+  margin: 0 auto;
 }
 
 .weather-icon {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .weather-icon img {
-	width: 100px;
-	height: 100px;
-	border-radius: 50%;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
 }
